@@ -89,7 +89,33 @@ const Homepage = () => {
           )}
           color="blue"
         />
-
+        <div className="card">
+          <h2 className="card-title">Recovered</h2>
+          <p className="card-text" style={{ color: "green" }}>
+            {covidWorldStats.reduce(
+              (prev, curr) => (prev += curr?.cases?.recovered || 0),
+              0
+            )}
+          </p>
+        </div>
+        <div className="card">
+          <h2 className="card-title">Deaths</h2>
+          <p className="card-text" style={{ color: "red" }}>
+            {covidWorldStats.reduce(
+              (prev, curr) => (prev += curr?.deaths?.total || 0),
+              0
+            )}
+          </p>
+        </div>
+        <div className="card">
+          <h2 className="card-title">Active Cases</h2>
+          <p className="card-text" style={{ color: "blue" }}>
+            {covidWorldStats.reduce(
+              (prev, curr) => (prev += curr?.cases?.active || 0),
+              0
+            )}
+          </p>
+        </div>
         <NavLink
           to="/country-stats"
           className="card"
