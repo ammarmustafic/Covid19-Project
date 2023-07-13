@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const NavBar = styled.div`
   width: 99.9%;
   height: 100px;
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
