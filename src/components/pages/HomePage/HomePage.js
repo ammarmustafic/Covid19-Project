@@ -3,6 +3,15 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 import "./HomePage.css";
 
+const Card = ({ title, value, color }) => (
+  <div className="card">
+    <h2 className="card-title">{title}</h2>
+    <p className="card-text" style={{ color }}>
+      {value}
+    </p>
+  </div>
+);
+
 const Homepage = () => {
   const [covidWorldStats, setCovidWorldStats] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -56,34 +65,30 @@ const Homepage = () => {
         World Stats
       </h1>
       <div className="card-container">
-        <div className="card">
-          <h2 className="card-title">Recovered</h2>
-          <p className="card-text" style={{ color: "green" }}>
-            {covidWorldStats.reduce(
-              (prev, curr) => (prev += curr?.cases?.recovered || 0),
-              0
-            )}
-          </p>
-        </div>
-        <div className="card">
-          <h2 className="card-title">Deaths</h2>
-          <p className="card-text" style={{ color: "red" }}>
-            {covidWorldStats.reduce(
-              (prev, curr) => (prev += curr?.deaths?.total || 0),
-              0
-            )}
-          </p>
-        </div>
-        <div className="card">
-          <h2 className="card-title">Active Cases</h2>
-          <p className="card-text" style={{ color: "blue" }}>
-            {covidWorldStats.reduce(
-              (prev, curr) => (prev += curr?.cases?.active || 0),
-              0
-            )}
-          </p>
-        </div>
-
+        <Card
+          title="Recovered"
+          value={covidWorldStats.reduce(
+            (prev, curr) => (prev += curr?.cases?.recovered || 0),
+            0
+          )}
+          color="green"
+        />
+        <Card
+          title="Deaths"
+          value={covidWorldStats.reduce(
+            (prev, curr) => (prev += curr?.deaths?.total || 0),
+            0
+          )}
+          color="red"
+        />
+        <Card
+          title="Active Cases"
+          value={covidWorldStats.reduce(
+            (prev, curr) => (prev += curr?.cases?.active || 0),
+            0
+          )}
+          color="blue"
+        />
         <NavLink
           to="/country-stats"
           className="card"
