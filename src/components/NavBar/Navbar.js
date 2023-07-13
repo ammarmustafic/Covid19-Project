@@ -3,8 +3,10 @@ import { NavBar, Covidimg, Li } from "./navbarcss";
 
 const Header = () => {
   return (
-    <NavBar>
-      <Covidimg src="https://cornwallglass.co.uk/wp-content/uploads/2020/08/Covid-19-Coronavirus-logo.jpg" />
+     <NavBar>
+      <NavLink to="/" exact>
+        <Covidimg src="https://cornwallglass.co.uk/wp-content/uploads/2020/08/Covid-19-Coronavirus-logo.jpg" />
+      </NavLink>
       <ul style={{ display: "flex", listStyleType: "none" }}>
         <Li>
           <NavLink
