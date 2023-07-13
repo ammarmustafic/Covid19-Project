@@ -39,8 +39,8 @@ const Homepage = () => {
       ) : (
         <div className="bg-cover">
           <img
-            src="https://www.bloomberg.com/graphics/2020-coronavirus-cases-world-map/img/2020-coronavirus-cases-world-map-facebook.png?t=202011091543"
             className="center-image"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/COVID-19_Outbreak_World_Map.svg/2560px-COVID-19_Outbreak_World_Map.svg.png"
             alt="COVID-19"
           />
         </div>
@@ -48,7 +48,7 @@ const Homepage = () => {
       <h1
         style={{
           fontSize: "40px",
-          color: "blue",
+          color: "firebrick",
           textAlign: "center",
         }}
         className="card-title"
