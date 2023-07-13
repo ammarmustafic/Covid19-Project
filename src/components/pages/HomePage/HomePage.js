@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-  import "./HomePage.css";
+import "./HomePage.css";
 
-  const Card = ({ title, value, color }) => (
-    <div className="card">
-      <h2 className="card-title">{title}</h2>
-      <p className="card-text" style={{ color }}>
-        {value}
-      </p>
-    </div>
+const Card = ({ title, value, color }) => (
+  <div className="card">
+    <h2 className="card-title">{title}</h2>
+    <p className="card-text" style={{ color }}>
+      {value}
+    </p>
+  </div>
 );
 
 const Homepage = () => {
@@ -89,33 +89,6 @@ const Homepage = () => {
           )}
           color="blue"
         />
-        <div className="card">
-          <h2 className="card-title">Recovered</h2>
-          <p className="card-text" style={{ color: "green" }}>
-            {covidWorldStats.reduce(
-              (prev, curr) => (prev += curr?.cases?.recovered || 0),
-              0
-            )}
-          </p>
-        </div>
-        <div className="card">
-          <h2 className="card-title">Deaths</h2>
-          <p className="card-text" style={{ color: "red" }}>
-            {covidWorldStats.reduce(
-              (prev, curr) => (prev += curr?.deaths?.total || 0),
-              0
-            )}
-          </p>
-        </div>
-        <div className="card">
-          <h2 className="card-title">Active Cases</h2>
-          <p className="card-text" style={{ color: "blue" }}>
-            {covidWorldStats.reduce(
-              (prev, curr) => (prev += curr?.cases?.active || 0),
-              0
-            )}
-          </p>
-        </div>
         <NavLink
           to="/country-stats"
           className="card"
