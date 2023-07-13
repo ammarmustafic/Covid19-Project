@@ -16,10 +16,10 @@ export const Covidimg = styled.img`
 
 export const Li = styled.li`
   margin: 20px;
+  font-size: 20px;
   position: relative;
-
   &:hover {
-    font-size: large;
+    font-size: 25px;
     color: red;
     transition: color 0.5s, font-size 0.5s;
 
