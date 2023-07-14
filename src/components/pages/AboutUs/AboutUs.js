@@ -63,7 +63,9 @@ const PersonCard = ({
 const AboutUsPage = () => {
   return (
     <div className="about-us-container">
-      <h1 className="about-us-heading">Have a look on our team!</h1>
+      <h1 className="about-us-heading">About Us</h1>
+      <p className="about-us-p">Meet our team members who have contributed their creativity and hard work to bring this project to life.
+</p>
       <div className="person-card-container">
         <PersonCard
           name="Ammar Mustafić"
