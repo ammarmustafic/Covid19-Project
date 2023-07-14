@@ -13,27 +13,39 @@
     .person-card-container {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
     }
     
     .person-card {
         width: 300px;
-        height: 275px;
-        margin: 20px;
-        border-radius: 40px;
-        box-shadow: 0px 2px 22px 3px rgba(0,0,0,0.3);
-        background-color: transparent;
-        overflow: hidden;
-        cursor: pointer;
-        transition: transform 0.3s, width 0.3s;
-        position: relative;
+        height: 250px;
+        margin: 30px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 22px 3px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        text-align: center;
+        opacity: 0; 
+        animation: showCard 0.3s ease-in-out 0.3s forwards;
+        transition: transform 0.3s;
+      }
+      
+      @keyframes showCard {
+        0% {
+          opacity: 0; 
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     
     .person-card:hover {
         transform: translateY(-5px);
         width: 350px;
         box-shadow: 0px 2px 22px 3px rgba(0,0,550,0.3);
-        height: 530px;
+        height: 400px;
         transition: 0.3s ease-in-out;
     }
     
@@ -42,19 +54,30 @@
         height: 250px;
     }
 
+  
     .person-image {
-        width: 70%;
-        display: flex;
-        margin: 0 auto;
-        height: auto;
-        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
         object-fit: cover;
-        transition: transform 0.6s;
-    }
+        opacity: 0; 
+        animation: showImage 0.5s ease-in-out 0.5s forwards; 
+      }
+      
+      @keyframes showImage {
+        0% {
+          opacity: 0; 
+          transform: scale(0.8); 
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1); 
+        }
+      }
     
     .person-card:hover .person-image {
         transform: scale(1.1);
-        border-radius: 10px;
+        transition: 0.5s ease-in-out;
     }
     
     .person-details {
@@ -68,6 +91,7 @@
         opacity: 1;
     }
     
+
     .person-socials {
         display: flex;
         font-size: 30px;
