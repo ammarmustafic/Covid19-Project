@@ -98,6 +98,7 @@ const Homepage = () => {
             justifyContent: "center",
             alignItems: "center",
           }}
+          onClick={() => window.scrollTo(0, 0)}
         >
           <h2 className="card-title">Country Stats</h2>
         </NavLink>

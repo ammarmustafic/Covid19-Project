@@ -13,6 +13,7 @@ const Header = () => {
             to="/covid-stats"
             activeClassName="active-link"
             style={{ textDecoration: "none", color: "red" }}
+            onClick={() => window.scrollTo(0, 0)}
           >
             Covid Stats
           </NavLink>
@@ -22,6 +23,7 @@ const Header = () => {
             to="/country-stats"
             activeClassName="active-link"
             style={{ textDecoration: "none", color: "red" }}
+            onClick={() => window.scrollTo(0, 0)}
           >
             Country Stats
           </NavLink>

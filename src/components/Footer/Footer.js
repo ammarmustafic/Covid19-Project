@@ -10,7 +10,7 @@ function Footer() {
       <div className="container">
         <div className="social-icons">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
