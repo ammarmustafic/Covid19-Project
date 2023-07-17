@@ -53,7 +53,7 @@ const CovidStats = () => {
                 </thead>
                 <tbody>
                     {records.map((country,i)=>(
-                        <tr key={i} className="tbody">
+                        <tr key={i} className="table-body">
                             <td style={{width:"70px"}}>{firstIndex +i+1}.</td>
                             <td style={{textAlign:"left", width:"220px",padding: "5px 15px"}}>{country.country}</td>
                             <td style={{width: "150px"}}>{country.population === null ? ("/"):country.population}</td>
@@ -63,7 +63,6 @@ const CovidStats = () => {
                     ))}
              </tbody>
           </table>
-
           <nav>
             <ul className="pagination">
                 <li className="page-item">
