@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import AboutUsPage from "./components/pages/AboutUs/AboutUs";
 import Homepage from "./components/pages/HomePage/HomePage";
 import CountryStats from "./components/pages/CountryStats/countrystats";
+import CovidStats from "./components/pages/CovidStats/CovidStats";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Homepage />} />
             <Route path="/country-stats" element={<CountryStats/>}></Route>
             <Route path={"/about-us"} element={<AboutUsPage />}></Route>
+            <Route path={"/covid-stats"} element={<CovidStats/>}></Route>
           </Routes>
         </main>
         <Footer />
